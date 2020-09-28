@@ -1,0 +1,16 @@
+{{#each this}}
+
+    <h2>{{name}}</h2>
+    <img src="{{flag}}" alt="Flag of {{name}}" width="320">
+    <p>Столица -{{capital}}</p>
+    <p>Денежная единица{{currency}}</p>
+    <p>Население - {{population}} человек</p>
+    <p>Официальный язык - {{language}}</p>
+    {{#if infected}}
+    <p>Все плохо! Есть вирус!!!</p>
+    {{/if}}
+    {{#unless infected}}
+    <p>Все Ok! Вируса нет!!!</p>
+    {{/unless}}
+
+{{/each}}

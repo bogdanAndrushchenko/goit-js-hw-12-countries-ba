@@ -50,6 +50,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "fontsource-indie-flower": "^3.0.9",
     "handlebars": "^4.7.6"
   }
 }
