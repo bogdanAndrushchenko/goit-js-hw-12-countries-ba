@@ -10,19 +10,21 @@
   <body>
     <header>
       <h1>Welcome :)</h1>
-      <h2>Which country do you want to know more about?</h2>
+      <p>Which country do you want to know more about?</p>
     </header>
     <main>
       <section>
         <div class="for_input">
           <input
             type="text"
-            placeholder="Your couvtries?"
+            name="country"
+            placeholder="Your countries?"
             id="js-search-input"
             class="input"
           />
         </div>
-        <div id="js-countries-container"></div>
+        <ul class="js-countries-list"></ul>
+        <div id="js-country-container"></div>
       </section>
     </main>
   </body>

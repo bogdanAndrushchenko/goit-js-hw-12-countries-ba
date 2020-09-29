@@ -1,26 +1,37 @@
 import fetchCountries from './fetchCountries'
-import updateCountriesMarkup from './update-countries-markup';
+
+import error from './notification'
 import refs from './refs';
+import {
+  updateCountryMarkup,
+  countriesListMarkup,
+  cleanCountryMarkup,
+  cleanMarkupBefore,
+  cleanInputValue,
+} from './update-countries-markup';
+const debounce = require('lodash.debounce');
 
 
-// const inputRef = document.querySelector("#name-input")
-// inputRef.addEventListener(, event => {});
-//     helloTextRef.textContent = 
-//     if (event.target.value === '') {
-//         helloTextRef.textContent = 'незнакомец'
-//     }
-// })
-// fetch(`https://restcountries.eu/rest/v2/name/${name}`).then().then().catch()
-// fetchCountries('poland').then(updateCountriesMarkup)
 
 
-refs.searchInput.addEventListener('input', event => {
-    // event.preventDefault();
-  
-    const form = event.currentTarget;
-    const inputValue = event.target.value;
-  
-    refs.countriesContainer.innerHTML = '';
-  
-    fetchCountries(inputValue).then(updateCountriesMarkup);
-  });
+const search_inrut = debounce((event) => {
+  const inputValue = event.target.value;
+  cleanMarkupBefore()
+  fetchCountries(inputValue).then(arr => {
+    if (arr >= 10) {
+      error('pam bam');
+      return
+    };
+    if (arr.message) {
+      error(arr.message);
+      return;
+    }
+    countriesListMarkup(data);
+
+  })
+}, 1000)
+
+
+
+
+refs.searchInput.addEventListener('input', search_inrut);

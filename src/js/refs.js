@@ -1,6 +1,7 @@
 const refs = {
     searchInput: document.querySelector('#js-search-input'),
-    countriesContainer: document.querySelector('#js-countries-container'),
+    countriesList:document.querySelector('.js-countries-list'),
+    countryContainer: document.querySelector('#js-country-container'),
   };
   
   export default refs;

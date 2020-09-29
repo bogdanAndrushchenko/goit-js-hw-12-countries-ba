@@ -51,6 +51,9 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "fontsource-indie-flower": "^3.0.9",
-    "handlebars": "^4.7.6"
+    "handlebars": "^4.7.6",
+    "lodash.debounce": "^4.0.8",
+    "material-design-icons": "^3.0.1",
+    "pnotify": "^5.1.2"
   }
 }

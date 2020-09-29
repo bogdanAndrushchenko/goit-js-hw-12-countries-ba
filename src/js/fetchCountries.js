@@ -1,4 +1,5 @@
 import { data } from "autoprefixer";
+import error from "./notification";
 
  
 function fetchCountries(searchQuery) {
@@ -12,7 +13,7 @@ function fetchCountries(searchQuery) {
     
       return fetch(url) //options)
         .then(res => res.json())
-        .then(data);
+        .catch(error => console.log(error))
 }
 
 export default fetchCountries;
