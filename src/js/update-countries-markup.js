@@ -4,13 +4,13 @@ import refs from './refs';
 
 function updateCountryMarkup(data) { ///countryMarkup
   refs.countryContainer.classList.add('countries');
-  refs.countryContainer.innerHTML = oneCountryTpl(...data);
+  refs.countryContainer.innerHTML = oneCountryTpl(data);
 
 }
 
 function countriesListMarkup(data) { ///countriesMarkup
   const markup = countriesTpl(data);
-  refs.countriesList.insertAdjacentElement('beforeend', markup);
+  refs.countriesList.insertAdjacentHTML('beforeend', markup);
 }
 
 
@@ -26,9 +26,11 @@ function cleanMarkupBefore() { ///clearBeforeMarkup
 
 }
 
-function cleanInputValue() { ///clearInput
+function cleanInputValue() { 
   refs.searchInput.value = " ";
 }
+
+const message = 'Danger!!!'
 
 
 
@@ -40,26 +42,5 @@ export {
   cleanCountryMarkup,
   cleanMarkupBefore,
   cleanInputValue,
+  message,
 }
-
-
-
-//////////////////////////
-// import countriesTemplate from '../templates/countries.hbs';
-// import countryTemplate from '../templates/country.hbs';
-// import ref from '../js/refs.js';
-
-
-
-
-
-
-
-
-// export {
-//   countriesMarkup,
-//   clearBeforeMarkup,
-//   countryMarkup,
-//   clearInput,
-//   clearCountry,
-// };

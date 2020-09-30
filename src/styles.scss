@@ -10,7 +10,6 @@ html {
 
 body {
   background-image: url('./img/mapEarth.jpg');
-  background-size: cover;
 }
 
 header {
@@ -21,7 +20,7 @@ header {
   text-align: center;
 }
 
-.for_input{
+.for_input {
   display: flex;
   justify-content: center;
 }
@@ -40,11 +39,21 @@ input:focus {
   background-color: rgb(78, 228, 135);
 }
 
-.countries{
+.countries {
   padding: 12px 20px;
   margin: 15px auto;
   border: 2px solid rgb(79, 92, 48);
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.3);
   color: white;
+
+}
+
+.country-list {
+  color: rgb(243, 237, 229);
+  display: flex;
+  justify-content: center;
+  .country-list__name {
+    height: 15px;
+  }
 }
