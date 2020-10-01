@@ -2,18 +2,17 @@
 
 <h2>{{name}}</h2>
 <img src="{{flag}}" alt="Flag of {{name}}" width="320">
-<p>Papital -{{capital}}</p>
-<p>Денежная единица{{currency}}</p>
+<p>Capital -{{capital}}</p>
+
+
+{{#each currencies}}
+  <p>Currency - {{name}}</p>
+{{/each}}
 <p>Population - {{population}} people</p>
-{{#each language}}
-<p>Официальный язык - {{name}}</p>
+
+{{#each languages }}
+<p>Official language - {{name}}</p>
 {{/each}}
 
-{{#if infected}}
-<p>Все плохо! Есть вирус!!!</p>
-{{/if}}
-{{#unless infected}}
-<p>Все Ok! Вируса нет!!!</p>
-{{/unless}}
 
 {{/each}}

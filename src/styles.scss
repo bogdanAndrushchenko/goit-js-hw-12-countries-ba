@@ -12,32 +12,40 @@ body {
   background-image: url('./img/mapEarth.jpg');
 }
 
-header {
-  font-family: "Indie Flower";
-  font-size: 30px;
-  color: rgb(226, 173, 107);
-  display: block;
-  text-align: center;
+
+
+main {
+  .welcome {
+    font-family: "Indie Flower";
+    font-size: 30px;
+    color: rgb(226, 173, 107);
+    text-align: center;
+  }
 }
 
 .for_input {
   display: flex;
   justify-content: center;
+
+  .input {
+    width: 50%;
+    padding: 9px 15px;
+    margin: 8px auto;
+    border: 2px solid rgb(110, 79, 41);
+    border-radius: 4px;
+    background-color: rgb(245, 188, 118);
+    font-size: 22px;
+    color: rgb(238, 236, 236);
+  }
+
+  .input:focus {
+    background-color: rgb(78, 228, 135);
+  }
 }
 
-input {
-  width: 50%;
-  padding: 12px 20px;
-  margin: 8px auto;
-  border: 2px solid rgb(110, 79, 41);
-  border-radius: 4px;
-  background-color: rgb(245, 188, 118);
-  color: white;
-}
 
-input:focus {
-  background-color: rgb(78, 228, 135);
-}
+
+
 
 .countries {
   padding: 12px 20px;
@@ -50,9 +58,11 @@ input:focus {
 }
 
 .country-list {
-  color: rgb(243, 237, 229);
+  color: rgb(241, 193, 131);
+  font-size: 22px;
   display: flex;
   justify-content: center;
+
   .country-list__name {
     height: 15px;
   }
